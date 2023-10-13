@@ -555,6 +555,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .w-\[1200px\] {
   width: 1200px;
 }

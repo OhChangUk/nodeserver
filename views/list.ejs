@@ -16,8 +16,10 @@
     <!-- 스크립트 문법에서는 = 이 빠진다. html코드를 그대로 보여줄때는 = 이 들어간다. -->
     <ul class="flex justify-between items-center border">
         <li class="basis-1/2"><a href="/view/<%= data[i]._id %>"><%=data[i].title %></a></li>
-        <li class="basis-1/2"><%=data[i].content %></li>
+        <li class="basis-1/2"><%=data[i].content %> <a href="/edit/<%= data[i]._id %>">✏</a></li>
+        <li class="basis-1/2"><a href="/delete/<%= data[i]._id %>">🗑</a></li>
     </ul>
     <% } %>
+    <a href="/write">글쓰기</a>
 </body>
 </html>

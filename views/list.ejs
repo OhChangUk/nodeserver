@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <%- include('nav.ejs') %>
+    <!-- %- 렌더링 하는 것 -->
+    <!-- %= html코드를 그대로 보여주는 것 -->
+    <!-- % 자바스크립트 문법 -->
+
+    <% for(let i = 0; i < data.length; i++){ %>
+    <!-- 스크립트 문법에서는 = 이 빠진다. html코드를 그대로 보여줄때는 = 이 들어간다. -->
+    <ul class="flex justify-between items-center border">
+        <li class="basis-1/2"><a href="/view/<%= data[i]._id %>"><%=data[i].title %></a></li>
+        <li class="basis-1/2"><%=data[i].content %></li>
+    </ul>
+    <% } %>
+</body>
+</html>
